@@ -37,8 +37,9 @@ function showCertainOptions(form, questionTitle, options) {
     let item = items[i];
     
     if (item.getTitle() === questionTitle) {
-      if (item.getType() === FormApp.ItemType.MULT)
-
+      if (item.getType() === FormApp.ItemType.MULT);
+       var itemAsMultipleChoice = item.asMultipleChoiceItem();
+        itemAsMultipleChoice.setChoiceValues(options);
     }
   }
 }
